@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';
+
+.bg-image {
+  background-image: url('/assets/unsplash-new-zealand.jpg');
+  background-size: cover;
+  background-position: center;
+  //height: 1024px;
+  //height: 100vh; /* Set the desired height */
+  min-height: 100%; // to cover ALL viewport to the bottom
+}
+
+.clickable {
+  cursor: pointer;
+}

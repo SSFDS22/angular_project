@@ -1,0 +1,1 @@
+le ChangeDetection est declencher par des evenements , setInterval , setTimeout , asynchronous callback ( observable , promise then etc )
