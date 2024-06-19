@@ -1,7 +1,6 @@
 # ng12-todo-perf exercises
 
-Goal of this step :
-
+Goal of this step : 
 - install tools
 
 ## Install perf tools and logger
@@ -10,13 +9,6 @@ Goal of this step :
         npm i @gpeel/my-perf-tools
 
         npm i @gpeel/plog @gpeel/my-perf-tools
-
-or simpler
-
-    npm add @gpeel/plog
-
-Then you can say yess to perf tools. ANd you'll get the environment.ts file with the settings for plog already
-configured. => it's explained below.
 
 ### setup in AppModule
 
@@ -136,6 +128,7 @@ export const environment = {
     obsError: ['color:red', 'OBS-ERROR'],
     obsDebug: ['color:springgreen', 'OBS-DEBUG'],
 
+
     // tests
     tu: ['color:blue; font-size:1rem;', 'TU'],
     tuBeforeEach: ['color:slateblue', 'tu-BEFORE-EACH'],
@@ -187,11 +180,11 @@ with
 ALso in AppComponent.ts
 
 ````typescript
-  constructor()
-{
+  constructor() {
   Plog.action('AppComponent constructor => Plog works!');
 }
 ````
+ 
 
 ## Correct the bug
 
@@ -208,7 +201,7 @@ export class TodosFilterPipePipe implements PipeTransform {
 
 ## Perf Conclusion
 
-We corrected the Pipe's bug,
+We corrected the Pipe's bug, 
 
 ## Adding Perf Tools to monitor Angular Change-Detection refresh
 
@@ -230,7 +223,6 @@ in app.component.html add on the first line :
 
 <root-refresh-count></root-refresh-count>
 ````
-
 Now we see that the Pipe computes at each UI interaction for every NG DOM refresh.
 
 Now we see each Angular CD refresh, and the number of times the DOM has been refreshed and been computed by Angular. We

@@ -2,29 +2,30 @@ import {NgModule} from '@angular/core';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {BrowserModule} from '@angular/platform-browser';
 import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
+import {MyPerfModule} from '@gpeel/my-perf-tools';
+import {PlogModule} from '@gpeel/plog';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import {environment} from '../environments/environment';
 
 import {AppComponent} from './app.component';
-import {RemainingMessagePipe} from './remaining-message.pipe';
-import {TodosFilterPipePipe} from './todos-filter.pipe';
-import { PlogModule } from '@gpeel/plog';
-import { environment } from 'src/environments/environment';
-import { MyPerfModule } from '@gpeel/my-perf-tools';
+import {CrudModule} from './todo/crud.module';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    TodosFilterPipePipe,
-    RemainingMessagePipe,
-  ],
+
   imports: [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
-    PlogModule.forRoot(environment),
     NgbModule,
     FontAwesomeModule,
-    MyPerfModule
+    // @gpeel
+    PlogModule.forRoot(environment),
+    MyPerfModule,
+    //
+    CrudModule
+  ],
+  declarations: [
+    AppComponent,
   ],
   providers: [],
   bootstrap: [AppComponent]

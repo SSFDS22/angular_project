@@ -50,21 +50,4 @@ fails because the var cannot be of type undefined. To escape this check add the 
              myTitle!: string; // will not raise any error even in stricNullCheck mode
         }
 
-````
-export class AppComponent implements  OnInit {
-
-  ngOnInit(): void {
-    // this.uneTodo = {id:2, label: 'tt', completed: false };
-  }
-
-  // uneTodo : Todo = {id:2, label: 'tt', completed: false };
-  // uneTodo : Todo | undefined;
-  uneTodo!: Todo;
-
-  constructor() {
-    this.uneTodo = {id:2, label: 'tt', completed: false };
-  }
-
-````
-
 Otherwise ERROR : TS2564: Property 'myTitle' has no initializer and is not definitely assigned in the constructor.

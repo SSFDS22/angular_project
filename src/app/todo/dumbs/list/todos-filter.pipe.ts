@@ -1,15 +1,17 @@
 import {Pipe, PipeTransform} from '@angular/core';
-import {Todo, TODO_FILTER_ENUM} from './todo.model';
+import {Plog} from '@gpeel/plog';
+import {Todo, TODO_FILTER_ENUM} from '../../model/todo.model';
 
 @Pipe({
   name: 'todosFilterPipe',
-  pure: false
+  pure: true
+  // pure: false
 })
 export class TodosFilterPipePipe implements PipeTransform {
   counter = 0;
 
   transform(todos: Todo[], status: TODO_FILTER_ENUM): Todo[] {
-    console.log('pipe computation:' + this.counter++);
+    Plog.pipe('pipe computation:' + this.counter++);
     let res!: Todo[];
 
     if (status === TODO_FILTER_ENUM.ALL) {
