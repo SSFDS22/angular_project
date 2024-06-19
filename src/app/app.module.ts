@@ -7,6 +7,9 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {AppComponent} from './app.component';
 import {RemainingMessagePipe} from './remaining-message.pipe';
 import {TodosFilterPipePipe} from './todos-filter.pipe';
+import { PlogModule } from '@gpeel/plog';
+import { environment } from 'src/environments/environment';
+import { MyPerfModule } from '@gpeel/my-perf-tools';
 
 @NgModule({
   declarations: [
@@ -18,8 +21,10 @@ import {TodosFilterPipePipe} from './todos-filter.pipe';
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
+    PlogModule.forRoot(environment),
     NgbModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    MyPerfModule
   ],
   providers: [],
   bootstrap: [AppComponent]

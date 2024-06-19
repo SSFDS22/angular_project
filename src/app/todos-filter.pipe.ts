@@ -3,7 +3,7 @@ import {Todo, TODO_FILTER_ENUM} from './todo.model';
 
 @Pipe({
   name: 'todosFilterPipe',
-  pure: true
+  pure: false
 })
 export class TodosFilterPipePipe implements PipeTransform {
   counter = 0;

@@ -1,1 +1,5 @@
+pb propose pas les packages -> typescript restart ts server
+
 le ChangeDetection est declencher par des evenements , setInterval , setTimeout , asynchronous callback ( observable , promise then etc )
+Angular lance d'abord le ngDoCheck avant les Hooks angular.
+Mieux vaut eviter d'appeler une methode {{aMthode()}} elle est recalculer à chaque fois

@@ -2,6 +2,7 @@ import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {FormControl} from '@angular/forms';
 import {faCoffee, faEdit, faRemove} from '@fortawesome/free-solid-svg-icons';
 import {Todo, TODO_FILTER_ENUM, TodoUtils} from './todo.model';
+import { Plog } from '@gpeel/plog';
 
 /**
  * Note-4 : also I could have used a modal instead of a simple input to edit the label.
@@ -42,6 +43,7 @@ export class AppComponent implements OnInit {
   protected readonly console = console;
 
   constructor() {
+    Plog.action('AppComponent constructor => Plog works!');
     this.uneTodo = {id: 2, label: 'tt', completed: false};
   }
 

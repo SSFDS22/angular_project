@@ -1,5 +1,6 @@
 import {Pipe, PipeTransform} from '@angular/core';
 import {Todo} from './todo.model';
+import { Plog } from '@gpeel/plog';
 
 /**
  * This Pipe does ALL the work,
@@ -16,7 +17,7 @@ export class RemainingMessagePipe implements PipeTransform {
   counter = 0;
 
   transform(todos: Todo[]): string {
-    console.log('RemainingTasks Pipe computates:' + this.counter++);
+    Plog.pipe('Filtering-Pipe computes:' + this.counter++);
     const num = todos.filter(t => !t.completed).length;
     switch (num) {
       case 0:
